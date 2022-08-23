@@ -42,20 +42,44 @@ class Exercise2
 //3. Accept a string from the user and return the count of vowels in the string
 
 
-class Exercise3
-{
-    public static void Main()
-    {
-        string names = Console.ReadLine();
+vowels
 
-        for (int i = 0; i < names.Length; i++)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleAppDemo
+{
+    internal class vowels
+    {
+        public static bool isVowel(char ch)
         {
-            if (names[i] == ('a' | 'e' | 'i' | 'o' | 'u'))
+            ch = char.ToUpper(ch);
+            return (ch == 'A' || ch == 'E' ||ch == 'I' || ch == 'O' ||ch == 'U');
+        }
+
+        public static int countVowels(string str)
+        {
+            int count = 0;
+            for (int i = 0; i < str.Length; i++)
             {
-                var counter = 1;
-                counter = counter + 1;
-                Console.WriteLine($"count is {counter}");
+                if (isVowel(str[i]))
+                {
+                    ++count;
+                }
             }
+            return count;
+        }
+
+        public static void Main(string[] args)
+        {
+
+            string str = "abcdef";
+
+            Console.WriteLine(countVowels(str));
         }
     }
 }
