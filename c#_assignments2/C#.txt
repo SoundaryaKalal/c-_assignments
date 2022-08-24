@@ -1,4 +1,129 @@
-5.
+1.Write a C# Sharp program to print the output of multiplication of three numbers which will be entered by the user
+Convert this program using a function
+
+//multi2num
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        public static int mul_num(int num1, int num2, int num3)
+        {
+            return num1* num2 * num3;
+        }
+        public static void MSain()
+        {
+            int num1, num2, num3;
+
+            Console.Write("Input the first number to multiply: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input the second number to multiply: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input the third number to multiply: ");
+            num3 = Convert.ToInt32(Console.ReadLine());
+
+            int result = mul_num(num1, num2, num3);
+            Console.WriteLine($"the output is {result}");
+
+        }
+    }
+}
+
+2.Write a C# program that accepts and 2 numbers and prints the small no
+Convert this program using out parameter
+
+//swap//
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Swap
+    {
+        public static void numSwap(ref int dig1, ref int dig2)
+        {
+            int temp = 0;
+            temp = dig1;
+            dig1 = dig2;
+            dig2 = temp;
+
+        }
+        public static void Main()
+        {
+            int dig1 = 15;
+            int dig2 = 30;
+            Console.WriteLine($"Values before swap are {dig1},{dig2}");
+            numSwap(ref dig1, ref dig2);
+            Console.WriteLine($"Values after swap are {dig1},{dig2}");
+        }
+    }
+}
+3.Write a C# to swap two numbers using ref parameters
+
+//twonum
+
+namespace ConsoleApp2
+{
+    internal class SmallNum
+    {
+        public static void Num(int num1, int num2, out int result)
+        {
+            if (num1 > num2)
+            {
+                result = num1;
+            }
+            else
+            {
+                result = num2;
+            }
+        }
+        public static void Main()
+        {
+            int num1, num2;
+            Console.WriteLine("Enter First Number");
+
+
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter second Number");
+
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+
+            Num(num1, num2, out int result);
+            Console.WriteLine($"The smaller number is {result}");
+        }
+
+
+
+
+    }
+}
+
+4.Write a program that takes as input a number in 2011) and performs the following actions:
+– Calculates the sum of the digits (in our example 2+0+1+1 = 4).
+– Prints on the console the number in reversed order: dcba (in our example 1102).
+– Puts the last digit in the first position: dabc (in our example 1201).
+– Exchanges the second and the third digits: acbd (in our example 2101).
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+5.Write C# Program to Find Minimum and Maximum of Numbers
+
+//min&max num
+
 using System;
 using System.Linq;
 class Program
@@ -15,7 +140,10 @@ class Program
 
 
 
-6.
+6.Write a C# program to print all negative elements in an array
+
+//neg elementarry
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +177,10 @@ namespace ConsoleApplication1
 }
 
 
-7.
+7.Write C# program to print all unique element in an array
+
+//uniq elementarry
+
 static void Main(string[] args)  
         {  
             int[] items = { 3, 5, 4, 2, 6, 8, 9 };  
@@ -80,7 +211,10 @@ static void Main(string[] args)
         }  
 
 
-8.
+8.Write C# program to copy all elements of one array to another
+
+//one to another arry
+
 using System;
 class Program
 {
@@ -125,7 +259,10 @@ class Program
 }
 
 
-9.
+9.Write C# program to merge two sorted array
+
+//merge two stored arry
+
 using System;
 using System.Collections.Generic;
 
@@ -155,7 +292,10 @@ class Program {
 }
 
 
-10.
+10.Write C# Program to Find the Average Values of all the Array Elements
+
+//average value
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -195,7 +335,10 @@ class program
 
 
 
-11.
+11.Write a program in C# Sharp to find the second largest element in an array
+
+//second large element
+
 using System;  
 public class Exercise16  
 {  
@@ -250,7 +393,10 @@ public class Exercise16
 }
 
 
-12.
+12.Write a C# function to find whether a given number is prime. It should returns a Boolean true if the number if prime, else returns Boolean false
+
+//boolean number
+
 using System;
 public class funcexer9
 {
@@ -277,7 +423,9 @@ public class funcexer9
 
 
 
-13.
+13.Write C# function to find position of the first prime number in a given array. Use the above function to decide a number is prime or not.
+
+//prime number
 
 using System;
 
@@ -319,7 +467,10 @@ public static void Main(String[] args)
 
 
 
-14.
+14.Write C# function to find biggest prime number in a given array.
+
+//biggest gvn arry
+
 using System;
  
 class MyProgram {
@@ -361,5 +512,6 @@ class MyProgram {
   }
 }
 
-
+15.Modify Q2 to so that it returns both the position and also the number
+ 
 
